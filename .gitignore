@@ -1,0 +1,6 @@
+
+\.idea/
+
+dist/
+
+pysingleton\.egg-info/
