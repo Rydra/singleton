@@ -4,3 +4,10 @@ class Singleton(type):
         if cls not in cls._instances:
             cls._instances[cls] = super(Singleton, cls).__call__(*args, **kwargs)
         return cls._instances[cls]
+
+    def set_instance(cls, instance):
+        cls._instances[cls] = instance
+
+    def reset_instance(cls):
+        if cls in cls._instances:
+            del cls._instances[cls]
